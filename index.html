@@ -1,45 +1,1167 @@
-<!DOCTYPE html>
-<html>
+/* ===========================
+   IDK Werkz Premium Theme
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(60,110,255,.15), transparent 35%),
+        radial-gradient(circle at 85% 30%, rgba(30,60,140,.20), transparent 35%),
+        radial-gradient(circle at 50% 90%, rgba(255,255,255,.03), transparent 30%),
+        linear-gradient(135deg,#030303,#08182f,#000000);
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+    border-bottom:3px solid #D4AF37;
+    background:rgba(0,0,0,.55);
+}
+
+.logo{
+    width:170px;
+    border-radius:50%;
+    border:4px solid #D4AF37;
+    box-shadow:
+        0 0 15px #D4AF37,
+        0 0 35px rgba(212,175,55,.5);
+    transition:.4s;
+}
+
+.logo:hover{
+    transform:scale(1.05) rotate(3deg);
+}
+
+h1{
+    margin-top:20px;
+    font-size:55px;
+    color:#D4AF37;
+    text-shadow:0 0 15px rgba(212,175,55,.8);
+}
+
+.tagline{
+    margin-top:10px;
+    color:#dddddd;
+    font-size:22px;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:#111111ee;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:18px;
+    border-bottom:2px solid #D4AF37;
+    z-index:999;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    border:2px solid #D4AF37;
+    padding:12px 20px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#D4AF37;
+    color:black;
+    box-shadow:0 0 15px gold;
+}
+
+section{
+    max-width:1100px;
+    margin:35px auto;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:15px;
+    padding:30px;
+    backdrop-filter:blur(4px);
+}
+
+section h2{
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h2{
+    font-size:42px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+.button{
+    display:inline-block;
+    margin:20px 10px;
+    padding:15px 30px;
+    background:#D4AF37;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 18px gold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:2px solid #D4AF37;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(212,175,55,.6);
+}
+
+.card h3{
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:22px;
+    color:#ffe17b;
+    margin-top:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#181818;
+    color:#D4AF37;
+}
+
+th,td{
+    border:1px solid #D4AF37;
+    padding:14px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:rgba(255,255,255,.04);
+}
+
+footer{
+    margin-top:60px;
+    padding:30px;
+    background:#111;
+    text-align:center;
+    border-top:2px solid #D4AF37;
+    color:#cccccc;
+}
+
+@media(max-width:700px){
+
+h1{
+    font-size:38px;
+}
+
+.logo{
+    width:130px;
+}
+
+nav{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero h2{<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>IDK Werkz</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            /* Dark marble blue background */
-            background:
-                radial-gradient(circle at 20% 20%, rgba(40,90,180,0.25), transparent 35%),
-                radial-gradient(circle at 80% 30%, rgba(20,40,90,0.35), transparent 40%),
-                radial-gradient(circle at 30% 80%, rgba(70,70,70,0.2), transparent 40%),
-                linear-gradient(135deg, #050505, #0B1D3A, #000000);
+<title>IDK Werkz</title>
 
-            text-align: center;
-        }
-
-        h1 {
-            color: #D4AF37; /* Gold */
-            font-size: 48px;
-            margin-top: 80px;
-            text-shadow: 0 0 12px rgba(212,175,55,0.7);
-        }
-
-        p {
-            color: #EAEAEA;
-            font-size: 22px;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <h1>🎴 Welcome to IDK Werkz</h1>
-    <p>Your one-stop shop for cards and comics!</p>
+<header>
+
+<img src="wolf-logo.png" class="logo" alt="IDK Werkz Logo">
+
+<h1>IDK Werkz</h1>
+
+<p class="tagline">
+Collect • Trade • Create
+</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="cards.html">🃏 Cards</a>
+
+<a href="comics.html">📚 Comics</a>
+
+<a href="featured.html">⭐ Featured</a>
+
+<a href="prices.html">💰 Prices</a>
+
+</nav>
+
+<section class="hero">
+
+<h2>Welcome to IDK Werkz</h2>
+
+<p>
+
+Your destination for trading cards, comics, and exclusive mystery packs.
+
+</p>
+
+<a class="button" href="cards.html">
+Browse Cards
+</a>
+
+<a class="button" href="comics.html">
+Browse Comics
+</a>
+
+</section>
+
+<section>
+
+<h2>⭐ Featured This Week</h2>
+
+<div class="card">
+
+<h3>🎁 IDK Werkz Limited Pack</h3>
+
+<p>
+
+Every pack contains a surprise selection of cards and exclusive items.
+
+</p>
+
+<p class="price">
+
+10.00 SGD
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🃏 Our Cards</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Common</h3>
+
+<p>
+
+Affordable cards perfect for every collector.
+
+</p>
+
+<p class="price">
+
+0.50-0.75 SGD
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Rare</h3>
+
+<p>
+
+Harder to find and more valuable.
+
+</p>
+
+<p class="price">
+
+1.00-1.50 SGD
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Legendary</h3>
+
+<p>
+
+Some of the most powerful cards.
+
+</p>
+
+<p class="price">
+
+3.00 SGD
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📚 Comics</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Original Comics</h3>
+
+<p>
+
+Read stories created by IDK Werkz.
+
+</p>
+
+<p>
+
+Available in:
+
+</p>
+
+<p>
+
+4 Pages<br>
+6 Pages<br>
+8 Pages<br>
+12 Pages
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 IDK Werkz
+
+</footer>
 
 </body>
 
 </html>
+    font-size:30px;
+}
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IDK Werkz - Cards</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="wolf-logo.png" class="logo" alt="IDK Werkz Logo">
+
+<h1>IDK Werkz</h1>
+
+<p class="tagline">
+Premium Trading Cards
+</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="cards.html">🃏 Cards</a>
+
+<a href="comics.html">📚 Comics</a>
+
+<a href="featured.html">⭐ Featured</a>
+
+<a href="prices.html">💰 Prices</a>
+
+</nav>
+
+<section>
+
+<h2>🃏 Trading Cards</h2>
+
+<p>
+Browse our card rarities below.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🃏 Common</h3>
+<p>Perfect for new collectors.</p>
+<p class="price">0.50 - 0.75 SGD</p>
+</div>
+
+<div class="card">
+<h3>🟢 Uncommon</h3>
+<p>A little harder to find.</p>
+<p class="price">1.00 SGD</p>
+</div>
+
+<div class="card">
+<h3>🔵 Rare</h3>
+<p>Popular among collectors.</p>
+<p class="price">1.00 - 1.50 SGD</p>
+</div>
+
+<div class="card">
+<h3>🟣 Epic</h3>
+<p>Powerful and exciting.</p>
+<p class="price">2.00 - 2.50 SGD</p>
+</div>
+
+<div class="card">
+<h3>🟡 Legendary</h3>
+<p>Highly sought after.</p>
+<p class="price">3.00 SGD</p>
+</div>
+
+<div class="card">
+<h3>🌟 Mythical</h3>
+<p>Very limited.</p>
+<p class="price">3.50 - 4.00 SGD</p>
+</div>
+
+<div class="card">
+<h3>🩸 Blood Myth</h3>
+<p>Extremely rare.</p>
+<p class="price">4.00 - 4.50 SGD</p>
+</div>
+
+<div class="card">
+<h3>❓ Unknown</h3>
+<p>The rarest cards we sell.</p>
+<p class="price">5.00 - 5.50 SGD</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🎁 IDK Werkz Limited Pack</h2>
+
+<div class="card">
+
+<h3>Mystery Pack</h3>
+
+<p>
+Take a chance with our exclusive mystery pack!
+</p>
+
+<p class="price">
+10.00 SGD
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 IDK Werkz
+
+</footer>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IDK Werkz - Comics</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="wolf-logo.png" class="logo" alt="IDK Werkz Logo">
+
+<h1>IDK Werkz</h1>
+
+<p class="tagline">
+Original Comics by IDK Werkz
+</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="cards.html">🃏 Cards</a>
+
+<a href="comics.html">📚 Comics</a>
+
+<a href="featured.html">⭐ Featured</a>
+
+<a href="prices.html">💰 Prices</a>
+
+</nav>
+
+<section>
+
+<h2>📚 Our Comics</h2>
+
+<p>
+
+Every comic is created by the IDK Werkz team.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📖 4-Page Comic</h3>
+
+<p>
+
+A quick adventure that's easy to read.
+
+</p>
+
+<p class="price">
+
+0.50 SGD
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📘 6-Page Comic</h3>
+
+<p>
+
+A longer story with more action.
+
+</p>
+
+<p class="price">
+
+1.00 SGD
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📗 8-Page Comic</h3>
+
+<p>
+
+More pages, more adventure.
+
+</p>
+
+<p class="price">
+
+2.00 SGD
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📕 12-Page Comic</h3>
+
+<p>
+
+Our biggest comic with the longest story.
+
+</p>
+
+<p class="price">
+
+4.00 SGD
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🌟 Why Buy Our Comics?</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🎨 Original Artwork</h3>
+
+<p>
+
+Every comic is designed by our team.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📖 Fun Stories</h3>
+
+<p>
+
+Adventure, action, and creativity in every issue.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💎 Limited Editions</h3>
+
+<p>
+
+Some comics are printed in very small numbers.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 IDK Werkz
+
+</footer>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IDK Werkz - Featured Item</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="wolf-logo.png" class="logo" alt="IDK Werkz Logo">
+
+<h1>IDK Werkz</h1>
+
+<p class="tagline">
+Featured Item of the Week
+</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="cards.html">🃏 Cards</a>
+
+<a href="comics.html">📚 Comics</a>
+
+<a href="featured.html">⭐ Featured</a>
+
+<a href="prices.html">💰 Prices</a>
+
+</nav>
+
+<section class="hero">
+
+<h2>⭐ Featured Item of the Week ⭐</h2>
+
+<p>
+
+This week's special product is our exclusive mystery pack!
+
+</p>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>🎁 IDK Werkz Limited Pack</h2>
+
+<p>
+
+Take a chance and discover what's inside!
+
+</p>
+
+<ul style="text-align:left; max-width:500px; margin:20px auto; line-height:2;">
+<li>🎴 Mystery trading cards</li>
+<li>🌟 Chance to receive rare cards</li>
+<li>💎 Limited edition items</li>
+<li>🎁 Exclusive surprises</li>
+</ul>
+
+<p class="price">
+
+10.00 SGD
+
+</p>
+
+<a class="button" href="prices.html">
+
+View Full Price List
+
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🔥 Why Everyone Loves It</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🎁 Surprise Every Time</h3>
+
+<p>
+
+No two packs are exactly the same.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💎 Great Value</h3>
+
+<p>
+
+A fun way to grow your collection.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⭐ Limited Stock</h3>
+
+<p>
+
+Once they're gone, they're gone!
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 IDK Werkz
+
+</footer>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IDK Werkz - Price List</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="wolf-logo.png" class="logo" alt="IDK Werkz Logo">
+
+<h1>IDK Werkz</h1>
+
+<p class="tagline">
+Complete Price List
+</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="cards.html">🃏 Cards</a>
+
+<a href="comics.html">📚 Comics</a>
+
+<a href="featured.html">⭐ Featured</a>
+
+<a href="prices.html">💰 Prices</a>
+
+</nav>
+
+<section>
+
+<h2>💰 Trading Card Prices</h2>
+
+<table>
+
+<tr>
+<th>Card Type</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>🃏 Common</td>
+<td>0.50 - 0.75 SGD</td>
+</tr>
+
+<tr>
+<td>🟢 Uncommon</td>
+<td>1.00 SGD</td>
+</tr>
+
+<tr>
+<td>🔵 Rare</td>
+<td>1.00 - 1.50 SGD</td>
+</tr>
+
+<tr>
+<td>🟣 Epic</td>
+<td>2.00 - 2.50 SGD</td>
+</tr>
+
+<tr>
+<td>🟡 Legendary</td>
+<td>3.00 SGD</td>
+</tr>
+
+<tr>
+<td>🌟 Mythical</td>
+<td>3.50 - 4.00 SGD</td>
+</tr>
+
+<tr>
+<td>🩸 Blood Myth</td>
+<td>4.00 - 4.50 SGD</td>
+</tr>
+
+<tr>
+<td>❓ Unknown</td>
+<td>5.00 - 5.50 SGD</td>
+</tr>
+
+<tr>
+<td>🎁 IDK Werkz Limited Pack</td>
+<td>10.00 SGD</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>📚 Comic Prices</h2>
+
+<table>
+
+<tr>
+<th>Comic</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>📖 4-Page Comic</td>
+<td>0.50 SGD</td>
+</tr>
+
+<tr>
+<td>📘 6-Page Comic</td>
+<td>1.00 SGD</td>
+</tr>
+
+<tr>
+<td>📗 8-Page Comic</td>
+<td>2.00 SGD</td>
+</tr>
+
+<tr>
+<td>📕 12-Page Comic</td>
+<td>4.00 SGD</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>💎 Why Buy From IDK Werkz?</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏆 Fair Prices</h3>
+<p>Affordable for collectors of all ages.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Quality</h3>
+<p>Every product is carefully prepared by our team.</p>
+</div>
+
+<div class="card">
+<h3>🎁 Exclusive Items</h3>
+<p>Limited products you won't always find elsewhere.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 IDK Werkz
+
+</footer>
+
+</body>
+
+</html>// =========================
+// IDK Werkz Website Script
+// =========================
+
+// Welcome message
+console.log("Welcome to IDK Werkz!");
+
+// Fade in sections when scrolling
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+
+    });
+});
+
+sections.forEach(section => {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "0.8s";
+
+    observer.observe(section);
+
+});
+
+// Card hover glow
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.boxShadow = "0 0 30px gold";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.boxShadow = "";
+
+    });
+
+});
+
+// Logo spin
+const logo = document.querySelector(".logo");
+
+if (logo) {
+
+    logo.addEventListener("click", () => {
+
+        logo.style.transition = "0.8s";
+        logo.style.transform = "rotate(360deg)";
+
+        setTimeout(() => {
+
+            logo.style.transform = "";
+
+        }, 800);
+
+    });
+
+}
+
+// Secret message
+let clicks = 0;
+
+document.querySelector("h1").addEventListener("click", () => {
+
+    clicks++;
+
+    if (clicks === 5) {
+
+        alert("🎉 Secret Unlocked!\nThanks for visiting IDK Werkz!");
+
+        clicks = 0;
+
+    }
+
+});
+
+// Back to top button
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "⬆";
+
+topButton.style.position = "fixed";
+topButton.style.bottom = "20px";
+topButton.style.right = "20px";
+topButton.style.width = "50px";
+topButton.style.height = "50px";
+topButton.style.border = "none";
+topButton.style.borderRadius = "50%";
+topButton.style.background = "#D4AF37";
+topButton.style.color = "black";
+topButton.style.fontSize = "24px";
+topButton.style.cursor = "pointer";
+topButton.style.display = "none";
+topButton.style.boxShadow = "0 0 15px gold";
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 250) {
+
+        topButton.style.display = "block";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+        behavior: "smooth"
+
+    });
+
+});
